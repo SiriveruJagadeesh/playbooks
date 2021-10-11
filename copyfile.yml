@@ -1,0 +1,12 @@
+---
+- name: test playbook
+  hosts: all
+  become: yes
+  tasks:
+   - name: copying file from server
+     copy:
+       src: home/king/index.html
+       dest: home/king
+       owner: king
+       group: king
+       mode: 0644

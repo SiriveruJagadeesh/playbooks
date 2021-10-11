@@ -1,0 +1,14 @@
+---
+- name: test playbook
+  hosts: all
+  become: yes
+  tasks:
+  - name: to stop packages
+    service: 
+      name: httpd
+      state: stopped
+
+  - name: to remove httpd
+    yum:
+      name: httpd
+      state: absent

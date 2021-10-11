@@ -1,0 +1,8 @@
+---
+- name: creating another user
+  hosts: all
+  become: yes
+  tasks:
+  - file:
+      path: /home/king/mydir
+      state: directory
